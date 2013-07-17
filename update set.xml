@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2013-07-15 13:51:28">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<collisions/>
+<commit_date/>
+<deleted/>
+<description/>
+<inserted/>
+<name>Trello Integration</name>
+<release_date/>
+<remote_sys_id>5f67d49579a24100d439b68329ad3812</remote_sys_id>
+<state>loaded</state>
+<summary/>
+<sys_created_by>Jason.Butz</sys_created_by>
+<sys_created_on>2013-07-15 13:51:28</sys_created_on>
+<sys_id>048e670a79a64100d439b68329ad386b</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>Jason.Butz</sys_updated_by>
+<sys_updated_on>2013-07-15 13:51:28</sys_updated_on>
+<update_set display_value=""/>
+<update_source display_value=""/>
+<updated/>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT</action>
+<category>customer</category>
+<comments/>
+<name>dictionary_sys_user_e65c2cd579a24100d439b68329ad3813</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;database&gt;&lt;element label="User" name="sys_user" type="collection"&gt;&lt;element label="u_trello_token" max_length="80" name="u_trello_token" type="string"/&gt;&lt;/element&gt;&lt;/database&gt;</payload>
+<remote_update_set display_value="Trello Integration">048e670a79a64100d439b68329ad386b</remote_update_set>
+<sys_created_by>Jason.Butz</sys_created_by>
+<sys_created_on>2013-07-15 13:51:28</sys_created_on>
+<sys_id>048e670a79a64100d439b68329ad386e</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>Jason.Butz</sys_updated_by>
+<sys_updated_on>2013-07-15 13:51:28</sys_updated_on>
+<table>sys_user</table>
+<target_name>User</target_name>
+<type>Database field(s)</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<category>customer</category>
+<comments/>
+<name>sys_script_include_6007785979a24100d439b68329ad389b</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;client_callable&gt;true&lt;/client_callable&gt;&lt;description/&gt;&lt;name&gt;TrelloAJAX&lt;/name&gt;&lt;script&gt;var TrelloAJAX = Class.create();&amp;#13;
+TrelloAJAX.prototype = Object.extendsObject(AbstractAjaxProcessor, {&amp;#13;
+	getUserToken: function() {&amp;#13;
+		var user = gs.getUserID();&amp;#13;
+		var gr = new GlideRecord('sys_user');&amp;#13;
+		gr.get(user);&amp;#13;
+		&amp;#13;
+		return gr.u_trello_token;&amp;#13;
+	}&amp;#13;
+});&lt;/script&gt;&lt;sys_created_by&gt;Jason.Butz&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2013-07-12 16:35:27&lt;/sys_created_on&gt;&lt;sys_id&gt;6007785979a24100d439b68329ad389b&lt;/sys_id&gt;&lt;sys_mod_count&gt;20&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;Jason.Butz&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2013-07-12 18:28:10&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Trello Integration">048e670a79a64100d439b68329ad386b</remote_update_set>
+<sys_created_by>Jason.Butz</sys_created_by>
+<sys_created_on>2013-07-15 13:51:28</sys_created_on>
+<sys_id>0c8e670a79a64100d439b68329ad386c</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>Jason.Butz</sys_updated_by>
+<sys_updated_on>2013-07-15 13:51:28</sys_updated_on>
+<table/>
+<target_name>TrelloAJAX</target_name>
+<type>Script Include</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<category>customer</category>
+<comments/>
+<name>sys_ui_action_19bad89579a24100d439b68329ad38f6</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_ui_action"&gt;&lt;sys_ui_action action="INSERT_OR_UPDATE"&gt;&lt;action_name/&gt;&lt;active&gt;true&lt;/active&gt;&lt;client&gt;true&lt;/client&gt;&lt;comments/&gt;&lt;condition&gt;&lt;/condition&gt;&lt;form_action&gt;true&lt;/form_action&gt;&lt;form_button&gt;false&lt;/form_button&gt;&lt;form_context_menu&gt;true&lt;/form_context_menu&gt;&lt;form_link&gt;false&lt;/form_link&gt;&lt;hint/&gt;&lt;list_action&gt;false&lt;/list_action&gt;&lt;list_banner_button&gt;false&lt;/list_banner_button&gt;&lt;list_button&gt;false&lt;/list_button&gt;&lt;list_choice&gt;false&lt;/list_choice&gt;&lt;list_context_menu&gt;false&lt;/list_context_menu&gt;&lt;list_link&gt;false&lt;/list_link&gt;&lt;list_save_with_form_button&gt;false&lt;/list_save_with_form_button&gt;&lt;name&gt;Send to Trello&lt;/name&gt;&lt;onclick&gt;trelloDialog()&lt;/onclick&gt;&lt;order&gt;100&lt;/order&gt;&lt;script&gt;function trelloDialog() {&amp;#13;
+&amp;#13;
+   //Initialize and open the Dialog Window&amp;#13;
+   var dialog = new GlideDialogWindow("Trello");&amp;#13;
+   dialog.setTitle("Trello"); //Set the dialog title&amp;#13;
+   dialog.setPreference("comments_text", g_form.getValue('short_description'));&amp;#13;
+   dialog.setPreference("short_text", g_form.getValue('description'));&amp;#13;
+   dialog.render(); //Open the dialog&amp;#13;
+}&lt;/script&gt;&lt;show_insert&gt;true&lt;/show_insert&gt;&lt;show_multiple_update&gt;false&lt;/show_multiple_update&gt;&lt;show_query&gt;false&lt;/show_query&gt;&lt;show_update&gt;true&lt;/show_update&gt;&lt;sys_created_by&gt;Jason.Butz&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2013-07-12 14:35:33&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_id&gt;19bad89579a24100d439b68329ad38f6&lt;/sys_id&gt;&lt;sys_mod_count&gt;21&lt;/sys_mod_count&gt;&lt;sys_overrides/&gt;&lt;sys_updated_by&gt;Jason.Butz&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2013-07-12 20:07:36&lt;/sys_updated_on&gt;&lt;table&gt;task&lt;/table&gt;&lt;/sys_ui_action&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Trello Integration">048e670a79a64100d439b68329ad386b</remote_update_set>
+<sys_created_by>Jason.Butz</sys_created_by>
+<sys_created_on>2013-07-15 13:51:28</sys_created_on>
+<sys_id>0c8e670a79a64100d439b68329ad386f</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>Jason.Butz</sys_updated_by>
+<sys_updated_on>2013-07-15 13:51:28</sys_updated_on>
+<table>task</table>
+<target_name>Send to Trello</target_name>
+<type>UI Action</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action/>
+<category>customer</category>
+<comments/>
+<name>sys_dictionary_sys_user_u_trello_token</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;sys_dictionary element="u_trello_token" table="sys_user"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;attributes/&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation/&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;element&gt;u_trello_token&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;internal_type&gt;string&lt;/internal_type&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;80&lt;/max_length&gt;&lt;name&gt;sys_user&lt;/name&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_qual/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;&lt;sys_created_by&gt;Jason.Butz&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2013-07-12 15:47:44&lt;/sys_created_on&gt;&lt;sys_id&gt;9f2ca01979a24100d439b68329ad382e&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;Jason.Butz&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2013-07-12 18:25:36&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_dictionary&gt;</payload>
+<remote_update_set display_value="Trello Integration">048e670a79a64100d439b68329ad386b</remote_update_set>
+<sys_created_by>Jason.Butz</sys_created_by>
+<sys_created_on>2013-07-15 13:51:28</sys_created_on>
+<sys_id>4c8e670a79a64100d439b68329ad386e</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>Jason.Butz</sys_updated_by>
+<sys_updated_on>2013-07-15 13:51:28</sys_updated_on>
+<table>sys_user</table>
+<target_name>User.u_trello_token</target_name>
+<type>Dictionary</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<category>customer</category>
+<comments/>
+<name>sys_ui_page_d9107c1979a24100d439b68329ad3884</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_page"&gt;&lt;sys_ui_page action="INSERT_OR_UPDATE"&gt;&lt;category&gt;general&lt;/category&gt;&lt;client_script&gt;var __TRELLO_KEY = 'REPLACEME';&amp;#13;
+var jx={getHTTPObject:function(){var A=false;if(typeof ActiveXObject!="undefined"){try{A=new ActiveXObject("Msxml2.XMLHTTP")}catch(C){try{A=new ActiveXObject("Microsoft.XMLHTTP")}catch(B){A=false}}}else{if(window.XMLHttpRequest){try{A=new XMLHttpRequest()}catch(C){A=false}}}return A},load:function(url,callback,format,method,opt){var http=this.init();if(!http||!url){return }if(http.overrideMimeType){http.overrideMimeType("text/xml")}if(!method){method="GET"}if(!format){format="text"}if(!opt){opt={}}format=format.toLowerCase();method=method.toUpperCase();var now="uid="+new Date().getTime();url+=(url.indexOf("?")+1)?"&amp;amp;":"?";url+=now;var parameters=null;if(method=="POST"){var parts=url.split("?");url=parts[0];parameters=parts[1]}http.open(method,url,true);if(method=="POST"){http.setRequestHeader("Content-type","application/x-www-form-urlencoded");http.setRequestHeader("Content-length",parameters.length);http.setRequestHeader("Connection","close")}var ths=this;if(opt.handler){http.onreadystatechange=function(){opt.handler(http)}}else{http.onreadystatechange=function(){if(http.readyState==4){if(http.status==200){var result="";if(http.responseText){result=http.responseText}if(format.charAt(0)=="j"){result=result.replace(/[\n\r]/g,"");result=eval("("+result+")")}else{if(format.charAt(0)=="x"){result=http.responseXML}}if(callback){callback(result)}}else{if(opt.loadingIndicator){document.getElementsByTagName("body")[0].removeChild(opt.loadingIndicator)}if(opt.loading){document.getElementById(opt.loading).style.display="none"}if(error){error(http.status)}}}}}http.send(parameters)},bind:function(A){var C={"url":"","onSuccess":false,"onError":false,"format":"text","method":"GET","update":"","loading":"","loadingIndicator":""};for(var B in C){if(A[B]){C[B]=A[B]}}if(!C.url){return }var D=false;if(C.loadingIndicator){D=document.createElement("div");D.setAttribute("style","position:absolute;top:0px;left:0px;");D.setAttribute("class","loading-indicator");D.innerHTML=C.loadingIndicator;document.getElementsByTagName("body")[0].appendChild(D);this.opt.loadingIndicator=D}if(C.loading){document.getElementById(C.loading).style.display="block"}this.load(C.url,function(E){if(C.onSuccess){C.onSuccess(E)}if(C.update){document.getElementById(C.update).innerHTML=E}if(D){document.getElementsByTagName("body")[0].removeChild(D)}if(C.loading){document.getElementById(C.loading).style.display="none"}},C.format,C.method,C)},init:function(){return this.getHTTPObject()}};&amp;#13;
+&amp;#13;
+/*!&amp;#13;
+ * Card Values&amp;#13;
+ */&amp;#13;
+var cardName = g_form.getValue('short_description');&amp;#13;
+var cardDesc = g_form.getValue('description');&amp;#13;
+&amp;#13;
+/*!&amp;#13;
+ * Setup Events&amp;#13;
+ */&amp;#13;
+var trelloBoardsNode = document.getElementById('trelloBoards');&amp;#13;
+var trelloListsNode = document.getElementById('trelloLists');&amp;#13;
+var trelloOutputNode = document.getElementById('trelloOutput');&amp;#13;
+trelloBoardsNode.addEventListener("change", onBoardChange, false);&amp;#13;
+document.getElementById('insertCard').addEventListener('click', submitCard, false);&amp;#13;
+document.getElementById('cancelBtn').addEventListener('click', cancelTrello, false);&amp;#13;
+/*!&amp;#13;
+ * Populate the list of boards&amp;#13;
+ */&amp;#13;
+var ajax = new GlideAjax('TrelloAJAX');&amp;#13;
+ajax.addParam('sysparm_name','getUserToken');&amp;#13;
+ajax.getXMLWait();&amp;#13;
+var userToken = ajax.getAnswer();&amp;#13;
+&amp;#13;
+if(userToken == "" || userToken == null || userToken == undefined)&amp;#13;
+{&amp;#13;
+	alert('You need to setup a Trello token to use this feature.');&amp;#13;
+	GlideDialogWindow.get().destroy(); //Close the dialog window&amp;#13;
+}&amp;#13;
+&amp;#13;
+jx.load('https://trello.com/1/members/my/boards?key='+__TRELLO_KEY+'&amp;amp;token='+userToken, function(data)&amp;#13;
+{&amp;#13;
+	for(var i = 0; i &amp;lt; data.length; i++)&amp;#13;
+	{&amp;#13;
+		var board = data[i];&amp;#13;
+		var e = document.createElement('option');&amp;#13;
+		e.innerHTML = board.name&amp;#13;
+		e.value = board.id;&amp;#13;
+		trelloBoardsNode.appendChild(e);&amp;#13;
+	}&amp;#13;
+},'json','get');&amp;#13;
+&amp;#13;
+/*!&amp;#13;
+ * Populate the list of lists&amp;#13;
+ */&amp;#13;
+function onBoardChange()&amp;#13;
+{&amp;#13;
+	var trelloBoard = trelloBoardsNode.value;&amp;#13;
+	if(trelloBoard == "")&amp;#13;
+	{&amp;#13;
+		alert('Please select a board.');&amp;#13;
+		return;&amp;#13;
+	}&amp;#13;
+	trelloListsNode.innerHTML = "";&amp;#13;
+	jx.load('https://trello.com/1/boards/'+trelloBoard+'/lists?key='+__TRELLO_KEY+'&amp;amp;token='+userToken, function(data)&amp;#13;
+	{&amp;#13;
+		for(var i = 0; i &amp;lt; data.length; i++)&amp;#13;
+		{&amp;#13;
+			var list = data[i];&amp;#13;
+			var e = document.createElement('option');&amp;#13;
+			e.innerHTML = list.name&amp;#13;
+			e.value = list.id;&amp;#13;
+			trelloListsNode.appendChild(e);&amp;#13;
+		}&amp;#13;
+	},'json','get');&amp;#13;
+	return true;&amp;#13;
+}&amp;#13;
+&amp;#13;
+/*!&amp;#13;
+ * Submit the card&amp;#13;
+ */&amp;#13;
+function submitCard()&amp;#13;
+{&amp;#13;
+	var data = {&amp;#13;
+		name: cardName,&amp;#13;
+		desc: cardDesc,&amp;#13;
+		idList: trelloListsNode.value,&amp;#13;
+		key: __TRELLO_KEY,&amp;#13;
+		token: userToken&amp;#13;
+	}&amp;#13;
+	if(trelloListsNode.value == '')&amp;#13;
+	{&amp;#13;
+		alert('Please select a list.')&amp;#13;
+		return;&amp;#13;
+	}&amp;#13;
+	jx.load('https://trello.com/1/cards'+obj_to_query(data), function(data)&amp;#13;
+	{&amp;#13;
+		g_form.addInfoMessage('A card was created in Trello. &amp;lt;a href="'+data.url+'"&amp;gt;View the card&amp;lt;/a&amp;gt;');&amp;#13;
+		GlideDialogWindow.get().destroy(); //Close the dialog window&amp;#13;
+	},'json','post');&amp;#13;
+	return true;&amp;#13;
+}&amp;#13;
+&amp;#13;
+/*!&amp;#13;
+ * Cancel&amp;#13;
+ */&amp;#13;
+function cancelTrello()&amp;#13;
+{&amp;#13;
+	GlideDialogWindow.get().destroy(); //Close the dialog window&amp;#13;
+	return true;&amp;#13;
+}&amp;#13;
+&amp;#13;
+// Helpers&amp;#13;
+function obj_to_query(obj) {&amp;#13;
+    var parts = [];&amp;#13;
+    for (var key in obj) {&amp;#13;
+        if (obj.hasOwnProperty(key)) {&amp;#13;
+            parts.push(encodeURIComponent(key) + '=' + encodeURIComponent(obj[key]));&amp;#13;
+        }&amp;#13;
+    }&amp;#13;
+    return "?" + parts.join('&amp;amp;');&amp;#13;
+}&amp;#13;
+&amp;#13;
+function error(err)&amp;#13;
+{&amp;#13;
+	alert("Whatever was going on with Trello probably didn't work since there was an error.");&amp;#13;
+}&lt;/client_script&gt;&lt;description/&gt;&lt;html&gt;&amp;lt;?xml version="1.0" encoding="utf-8" ?&amp;gt;&amp;#13;
+&amp;lt;j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null"&amp;gt;&amp;#13;
+	&amp;lt;g:evaluate var="jvar_short_description" expression="RP.getWindowProperties().get('short_description')" /&amp;gt;&amp;#13;
+	&amp;lt;g:evaluate var="jvar_description" expression="RP.getWindowProperties().get('description')" /&amp;gt;&amp;#13;
+	&amp;lt;g:ui_form&amp;gt;&amp;#13;
+		&amp;lt;table&amp;gt;&amp;#13;
+			&amp;lt;tr&amp;gt;&amp;#13;
+				&amp;lt;td&amp;gt;Boards&amp;lt;/td&amp;gt;&amp;#13;
+				&amp;lt;td&amp;gt;&amp;#13;
+					&amp;lt;select name="trelloBoards" id="trelloBoards"&amp;gt;&amp;#13;
+						&amp;lt;option&amp;gt;&amp;lt;/option&amp;gt;&amp;#13;
+					&amp;lt;/select&amp;gt;&amp;#13;
+				&amp;lt;/td&amp;gt;&amp;#13;
+			&amp;lt;/tr&amp;gt;&amp;#13;
+			&amp;lt;tr&amp;gt;&amp;#13;
+				&amp;lt;td&amp;gt;Lists&amp;lt;/td&amp;gt;&amp;#13;
+				&amp;lt;td&amp;gt;&amp;lt;select name="trelloLists" id="trelloLists"/&amp;gt;&amp;lt;/td&amp;gt;&amp;#13;
+			&amp;lt;/tr&amp;gt;&amp;#13;
+		&amp;lt;/table&amp;gt;&amp;#13;
+		&amp;#13;
+	&amp;lt;/g:ui_form&amp;gt;&amp;#13;
+&amp;lt;div id="trelloOutput"&amp;gt;&amp;lt;/div&amp;gt;&amp;#13;
+&amp;lt;button id="insertCard"&amp;gt;Insert Card&amp;lt;/button&amp;gt;&amp;lt;button id="cancelBtn"&amp;gt;Close&amp;lt;/button&amp;gt;&amp;#13;
+&amp;lt;/j:jelly&amp;gt;&lt;/html&gt;&lt;name&gt;Trello&lt;/name&gt;&lt;processing_script/&gt;&lt;sys_created_by&gt;Jason.Butz&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2013-07-12 16:04:10&lt;/sys_created_on&gt;&lt;sys_id&gt;d9107c1979a24100d439b68329ad3884&lt;/sys_id&gt;&lt;sys_mod_count&gt;50&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;Jason.Butz&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2013-07-12 19:47:16&lt;/sys_updated_on&gt;&lt;/sys_ui_page&gt;&lt;/record_update&gt;</payload>
+<remote_update_set display_value="Trello Integration">048e670a79a64100d439b68329ad386b</remote_update_set>
+<sys_created_by>Jason.Butz</sys_created_by>
+<sys_created_on>2013-07-15 13:51:28</sys_created_on>
+<sys_id>848e670a79a64100d439b68329ad386c</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>Jason.Butz</sys_updated_by>
+<sys_updated_on>2013-07-15 13:51:28</sys_updated_on>
+<table/>
+<target_name>Trello</target_name>
+<type>UI Page</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action/>
+<category>customer</category>
+<comments/>
+<name>sys_documentation_sys_user_u_trello_token_en</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;sys_documentation element="u_trello_token" language="en" table="sys_user"&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;u_trello_token&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Trello Token&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;sys_user&lt;/name&gt;&lt;plural&gt;Trello Tokens&lt;/plural&gt;&lt;sys_created_by&gt;Jason.Butz&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2013-07-12 15:47:44&lt;/sys_created_on&gt;&lt;sys_id&gt;ca5c2cd579a24100d439b68329ad3812&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_updated_by&gt;Jason.Butz&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2013-07-12 15:48:43&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;/sys_documentation&gt;</payload>
+<remote_update_set display_value="Trello Integration">048e670a79a64100d439b68329ad386b</remote_update_set>
+<sys_created_by>Jason.Butz</sys_created_by>
+<sys_created_on>2013-07-15 13:51:28</sys_created_on>
+<sys_id>c08e670a79a64100d439b68329ad386f</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>Jason.Butz</sys_updated_by>
+<sys_updated_on>2013-07-15 13:51:28</sys_updated_on>
+<table>sys_user</table>
+<target_name>User.Trello Token</target_name>
+<type>Field Label</type>
+<update_domain>global</update_domain>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+</unload>
